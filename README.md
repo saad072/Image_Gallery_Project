@@ -16,3 +16,5 @@ Welcome to the **Image Gallery** project! This web application allows users to u
 - **HTML5**
 - **CSS3**
 - **JavaScript**
+
+![Uploading image_gallery.PNG…]()
