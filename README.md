@@ -17,4 +17,4 @@ Welcome to the **Image Gallery** project! This web application allows users to u
 - **CSS3**
 - **JavaScript**
 
-![Uploading image_gallery.PNG…]()
+![image_gallery](https://github.com/user-attachments/assets/42d77218-1533-4aa7-89fe-32497eb4d523)
