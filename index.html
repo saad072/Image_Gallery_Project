@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immage Gallery</title>
+    <link href="./assets/images/logo.png" rel="icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/images/logo.png" alt="Gallery Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#my-uploads">My Uploads</a></li>
+                <li><a href="#favourites">Favourites</a></li>
+                <li><a href="#random">Random</a></li>
+                <li><a href="#wallpapers">Wallpapers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <h1 class="welcome-text">Welcome to Immage Vista</h1>
+        <p class="tagline">Where every click captures a moment, and every image tells a story.</p>
+    </section>
+    
+    <div id="my-uploads" class="gallery-section">
+        <h2>My Uploads</h2>
+        <input type="file" id="imageUpload" multiple>
+        <div id="uploadContainer" class="image-slider">
+            <!-- Images uploaded by the user will appear here -->
+        </div>
+    </div>
+
+    <div id="favourites" class="gallery-section">
+        <h2>Favourites</h2>
+        <div id="favouritesContainer" class="image-slider">
+            <!-- Images marked as favourites by the user will appear here -->
+        </div>
+    </div>
+
+    <div id="random" class="gallery-section">
+        <h2>Random</h2>
+        <div id="randomContainer" class="image-slider">
+            <!-- Manually added images for demonstration -->
+            <img src="./assets/Random images/1.jpg" alt="Random Image 1">
+            <img src="./assets/Random images/2.jpg" alt="Random Image 2">
+            <img src="./assets/Random images/3.jpg" alt="Random Image 3">
+            <img src="./assets/Random images/4.jpg" alt="Random Image 4">
+            <img src="./assets/Random images/5.jpg" alt="Random Image 5">
+            <img src="./assets/Random images/6.jpg" alt="Random Image 6">
+            <img src="./assets/Random images/7.jpg" alt="Random Image 7">
+            <img src="./assets/Random images/8.jpg" alt="Random Image 8">
+            <img src="./assets/Random images/9.jpg" alt="Random Image 9">
+            <img src="./assets/Random images/10.jpg" alt="Random Image 10">
+            <img src="./assets/Random images/11.jpg" alt="Random Image 11">
+            <img src="./assets/Random images/12.jpg" alt="Random Image 12">
+            <img src="./assets/Random images/13.jpg" alt="Random Image 13">
+            <img src="./assets/Random images/14.jpg" alt="Random Image 14">
+            <img src="./assets/Random images/15.jpg" alt="Random Image 15">
+        </div>
+    </div>
+    
+    <div id="wallpapers" class="gallery-section">
+        <h2>Wallpapers</h2>
+        <div id="wallpapersContainer" class="image-slider">
+            <!-- Use lazy loading for all images -->
+            <img src="./assets/Wallpapers/1.jpg" alt="1" loading="lazy">
+            <img src="./assets/Wallpapers/2.jpg" alt="2" loading="lazy">
+            <img src="./assets/Wallpapers/3.jpg" alt="3" loading="lazy">
+            <img src="./assets/Wallpapers/4.jpg" alt="4" loading="lazy">
+            <img src="./assets/Wallpapers/5.jpg" alt="5" loading="lazy">
+            <img src="./assets/Wallpapers/6.jpg" alt="6" loading="lazy">
+            <img src="./assets/Wallpapers/7.jpg" alt="7" loading="lazy">
+            <img src="./assets/Wallpapers/8.jpg" alt="8" loading="lazy">
+            <img src="./assets/Wallpapers/9.jpg" alt="9" loading="lazy">
+            <img src="./assets/Wallpapers/10.jpg" alt="10" loading="lazy">
+            <img src="./assets/Wallpapers/11.jpg" alt="11" loading="lazy">
+            <img src="./assets/Wallpapers/12.jpg" alt="12" loading="lazy">
+            <img src="./assets/Wallpapers/13.jpg" alt="13" loading="lazy">
+            <img src="./assets/Wallpapers/14.jpg" alt="14" loading="lazy">
+            <img src="./assets/Wallpapers/15.jpg" alt="15" loading="lazy">
+        </div>
+    </div>
+    
+
+    <!-- Modal for viewing images -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImage" class="modal-content" alt="Large View">
+    </div>        
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Immage Gallery. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/saad-asif-0995-/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/saad072" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

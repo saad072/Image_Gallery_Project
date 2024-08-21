@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('./assets/images/bg_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgb(76 160 127 / 77%);
+    padding: 0px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 110px;
+    padding-left: 80px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(165, 224, 88, 0.6);
+    border-radius: 5px;
+}
+
+.home-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(7 13 14 / 17%);
+    color: #fff;
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeUp 0.5s ease-out forwards;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeUp 0.6s ease-out 0.6s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gallery-section {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.674);
+    margin: 20px 0;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 20px;
+}
+
+.image-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+}
+
+.image-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-slider::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.image-slider::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.image-slider img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+.image-slider img:hover {
+    transform: scale(1.05);
+}
+
+#wallpapersContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+#wallpapersContainer img {
+    flex-shrink: 0; /* Prevent images from shrinking */
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+#wallpapersContainer img:hover {
+    transform: scale(1.05);
+}
+
+/* Action icons */
+.image-container {
+    position: relative;
+}
+
+.image-actions {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-actions {
+    opacity: 1;
+}
+
+.image-actions button {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.image-actions button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(76 160 127 / 77%);
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: rgba(23, 207, 158, 0.7);
+}
+
+.social-icon i {
+    margin-right: 8px; /* Add spacing between icon and text if needed */
+}
